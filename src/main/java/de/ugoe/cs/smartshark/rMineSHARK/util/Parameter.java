@@ -48,8 +48,7 @@ public class Parameter {
   public void init(String[] args) {
     CommandLine cmd = parseCommandLineArguments(args);
 
-    project = cmd.getOptionValue("n");
-    showVersion = cmd.hasOption("v");
+    project = cmd.getOptionValue("p");
     showHelp = cmd.hasOption("h");
     ssl = cmd.hasOption("ssl");
     dbName = cmd.getOptionValue("DB", "smartshark");
@@ -79,13 +78,6 @@ public class Parameter {
       System.out.println("The current parameter instance is not initialized!");
     }
     return dbName;
-  }
-
-  public boolean isShowVersion() {
-    if (!isInitialized()) {
-      System.out.println("The current parameter instance is not initialized!");
-    }
-    return showVersion;
   }
 
   public boolean isShowHelp() {
