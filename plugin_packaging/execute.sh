@@ -2,7 +2,7 @@
 PLUGIN_PATH=$1
 NEW_UUID=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 
-mkdir "dev/shm/$NEW_UUID"
+mkdir "tmp"
 
 COMMAND="java -jar $PLUGIN_PATH/build/rMineSHARK.jar --project ${2} --db-hostname $3 --db-port $4 --db-database $5"
 
@@ -25,4 +25,4 @@ fi
 
 $COMMAND
 
-rm -rf "/dev/shm/$NEW_UUID"
+rm -rf "tmp"
