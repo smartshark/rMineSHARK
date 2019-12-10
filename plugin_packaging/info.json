@@ -2,7 +2,7 @@
     "name": "rMineSHARK",
     "author": "Benjamin Ledel",
     "version": "0.0.1",
-    "plugin_type": "rev",
+    "plugin_type": "other",
     "linux_libraries": [
         "git", 
         "gradle"
@@ -26,27 +26,6 @@
             "position": 1,
             "type": "execute",
             "description": "path to the root folder of the plugin"
-        },
-        {
-            "name": "path",
-            "required": true,
-            "position": 2,
-            "type": "execute",
-            "description": "path to the project repository (revision must be set)"
-        },
-        {
-            "name": "revision",
-            "required": true,
-            "position": 3,
-            "type": "execute",
-            "description": "revision hash that is processed"
-        },
-        {
-            "name": "repository_url",
-            "required": true,
-            "position": 4,
-            "type": "execute",
-            "description": "url of the project"
         },
 		{
             "name": "project_name",

@@ -62,6 +62,9 @@ task fatJar(type: Jar) {
         	'Main-Class': 'de.ugoe.cs.smartshark.rMineSHARK.rMineShark'
     }
     baseName = project.name + '-all'
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    doFirst {
+        from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } } 
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
     with jar
 }
