@@ -48,7 +48,7 @@ public class Parameter {
   public void init(String[] args) {
     CommandLine cmd = parseCommandLineArguments(args);
 
-    project = cmd.getOptionValue("p");
+    project = cmd.getOptionValue("n");
     showHelp = cmd.hasOption("h");
     ssl = cmd.hasOption("ssl");
     dbName = cmd.getOptionValue("DB", "smartshark");
@@ -147,10 +147,6 @@ public class Parameter {
       } else if (commandLine.hasOption("v")) {
         printVersion();
         System.exit(0);
-      } else if (!commandLine.hasOption("n")) {
-        System.err.println("ERROR: Missing required options: n");
-        printHelp();
-        System.exit(1);
       }
     } catch (ParseException e) {
       System.err.println("ERROR: " + e.getMessage());

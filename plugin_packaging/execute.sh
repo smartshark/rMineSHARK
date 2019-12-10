@@ -15,7 +15,7 @@ if [ ! -z ${7+x} ] && [ ${7} != "None" ]; then
 fi
 
 if [ ! -z ${8+x} ] && [ ${8} != "None" ]; then
-	COMMAND="$COMMAND --db-authentication ${11}"
+	COMMAND="$COMMAND --db-authentication ${8}"
 fi
 
 if [ ! -z ${9+x} ] && [ ${9} != "None" ]; then

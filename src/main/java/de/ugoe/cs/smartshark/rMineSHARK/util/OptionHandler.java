@@ -23,7 +23,7 @@ public class OptionHandler {
   private void initOptions() {
     Option option;
 
-    option = new Option("p", "Name of the project. Required.");
+    option = new Option("n", "Name of the project. Required.");
     option.setRequired(false);
     option.setLongOpt("project");
     option.setArgs(1);
